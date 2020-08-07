@@ -41,12 +41,15 @@ And that is just a very simple example, where you are iterating the entire array
 If we have to put this on images, here is a good representation I borrowed from a medium article:
 
 <!-- array chain image -->
+![array chain](./non-transducer.gif)
+
 
 Some solutions to this could be to compose the map functions together (because functor laws taught us that ` f(a) -> f(b) == f(a • b) `) but you still have to filter before and reduce after.
 Transducers on the other hand, allow you to do all this (and more) in one single array iteration and without ANY intermediary array representation. 
 Again, to give you a visual representation of this here is another animated image borrowed from the same article 
 
 <!-- transducers image -->
+![transducers chain](./with-transducer.gif)
 
 At this point you may be convinced that transducers could be a good thing, but nothing you can't do without a reducer and some custom code inside, uh? 
 Well, while this is true you are overlooking one of the main advantages of transducers than your custom reducer does not have: **composability**.
@@ -175,6 +178,8 @@ But as soon as the size of the arrays and the complexity of transformations star
 I'm not a person that makes such claims without proofs, so here are some graphics of some of my own benchmarks:
 
 <!-- node benchmark -->
+![benchmark](./benchmark.png)
+
 
 You can [check the graphs in more detail here](https://danielorodriguez.com/nodejs-benchmarks/)
 
